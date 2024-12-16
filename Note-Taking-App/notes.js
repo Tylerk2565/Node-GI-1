@@ -77,9 +77,16 @@ const readNote = (title) => {
 }
 
 // Edit note function
-const editNote = (title, body) => {
+const editNote = (title, newBody) => {
   const notes = loadNotes();
-  
+  const note = notes.find((note) => note.title === title);
+
+  if (note) {
+    removeNote(title);
+    addNote(note.title, newBody);
+  } else {
+    console.log('Note not found');
+  }
 }
 
 // Exporting 
@@ -88,5 +95,6 @@ module.exports = {
   addNote: addNote,
   removeNote: removeNote,
   listNotes: listNotes,
-  readNote: readNote
+  readNote: readNote,
+  editNote: editNote
 };

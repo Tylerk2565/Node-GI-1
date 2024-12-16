@@ -82,7 +82,7 @@ yargs.command ({
     }
   },
   handler(argv) {
-    notes.editNote(argv.title, argv.body);
+    notes.editNote(argv.title, argv.newBody);
   }
 })
 
