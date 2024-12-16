@@ -1,0 +1,11 @@
+{
+  "name": "hosted-weather-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node Hosted-Weather-App/web-server/src/script.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
